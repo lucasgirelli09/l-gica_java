@@ -1,0 +1,27 @@
+package javaapplication1;
+
+public class JavaApplication1 {
+
+    public static void main(String[] args) {
+        float peso = -1, pesoTotal = 0, pesoG = 0, pesoM = Float.MAX_VALUE;
+        int qtdbois = 0;
+
+        while (peso != 0) {
+            
+                peso = InOut.leInt("digite o peso do boi: ");
+                if (peso > 0) {
+                    if(peso > pesoG)
+                        pesoG = peso;
+                    if(peso < pesoM)
+                        pesoM = peso;
+
+                pesoTotal += peso;
+                qtdbois++;
+            }
+        }
+        InOut.MsgDeInformacao("Estatisticas", "media peso boi: " + pesoTotal / qtdbois);
+        InOut.MsgDeInformacao("Estatisticas", "peso boi g: " + pesoG);
+        InOut.MsgDeInformacao("Estatisticas", "peso boi M: " + pesoM);
+
+    }
+}
