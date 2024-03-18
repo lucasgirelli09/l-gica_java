@@ -1,0 +1,17 @@
+
+package exemplo;
+
+public class app_main {
+    public static void main(String[] args) {
+        
+        int idade = 28;
+        
+        exemplo1 objAlice = new exemplo1(); 
+        objAlice.corCabelo = "rosa";
+        objAlice.posx = 10;
+        objAlice.posy = 20;
+        objAlice.posz = 30;
+        
+        InOut.MsgDeAviso("qual a cor do cabelo de alice?", "è " + objAlice.corCabelo);
+    }
+}
